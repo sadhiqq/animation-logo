@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+
+@import "https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.box{
+  animation: BoxAnimation 1s;
+}
+.logo {
+  animation: followpath 0.75s  ease-out infinite, Zoom 1.5s ease-out;
+  width: 50px;
+  height: 50px;
+}
+
+.text {
+  color: #e7e7e7;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  animation: TextAnimation 4s ease-in ;
+}
+
+
+@keyframes BoxAnimation {
+
+  0%{
+    transform: translateY(1200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+  
+}
+@keyframes followpath {
+  
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes Zoom {
+
+  0%{
+    transform: scale(6) rotate(0deg);
+  }
+  100%{
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+
+@keyframes TextAnimation {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+
+
+
